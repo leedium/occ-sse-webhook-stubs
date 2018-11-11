@@ -1,0 +1,9 @@
+{
+  "testTimeout": 20000,
+  "testFolder": "tests",
+  "devHost": "an external api development host (not required)",
+  "prodHost": "an external api production host",
+  "occAdminUrl": "{OCC ADMIN URL}/",
+  "occStoreUrl": "{OCC STOREFRONT URL}/",
+  "appKey": "{ADMIN APP KEY}"
+}
