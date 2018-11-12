@@ -1,5 +1,5 @@
 {
-  "name": "leedium-sse",
+  "name": "occ-webhooks-sse",
   "version": "1.0.0",
   "description": "Starter to help build and deploy Server Side Extensions to Oracle Commerce Cloud",
   "main": "app/index.js",
@@ -65,17 +65,17 @@
   },
   "publicUrls": [
     "/ccstorex/custom/v1/",
-    "/ccstorex/custom/v1/leedium/version",
-    "/ccstorex/custom/v1/leedium/externalPrice",
-    "/ccstorex/custom/v1/leedium/externalPriceValidation",
-    "/ccstorex/custom/v1/leedium/promotions"
+    "/ccstorex/custom/v1/webhook/version",
+    "/ccstorex/custom/v1/webhook/externalPrice",
+    "/ccstorex/custom/v1/webhook/externalPriceValidation",
+    "/ccstorex/custom/v1/webhook/promotions"
   ],
   "authenticatedUrls": [],
   "translations": [
     {
       "language": "en_US",
-      "description": "SSE for testing in LEEDIUM demo environment",
-      "name": "Leedium SSE"
+      "description": "SSE for testing occ webhooks",
+      "name": "OCC Webooks SSE"
     }
   ]
 }

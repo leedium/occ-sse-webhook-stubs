@@ -15,12 +15,12 @@
  * @description constants
  **/
 module.exports = {
-  SSE_NAME: 'leedium',
+  SSE_NAME: 'webhook',
   SSE_VERSION: '1',
   TEST_FOLDER: 'tests',
   NODE_EXTENSION_SERVER_PORT: 30655,
   NODE_EXTENSION_TEST_PORT: 3099,
-  ROUTE_BASE: '/v1/leedium',
+  ROUTE_BASE: '/v1/webhook',
   //
   HTTP_GET: 'GET',
   HTTP_POST: 'POST',

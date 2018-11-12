@@ -49,6 +49,8 @@ class ServiceExternalRequestTransformer {
       return a;
     }, []);
 
+    console.log(updatedPriceList)
+
     return {
       items: updatedPriceList
     };
