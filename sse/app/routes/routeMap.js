@@ -22,7 +22,6 @@ const cors = require('cors');
 
 const Route = require('./route');
 const constants = require('../../constants');
-const serviceBasic = require('../api/serviceBasic');
 const serviceExternalRequestApi = require('../api/serviceExternalRequestApi');
 
 let corsOptions = {
@@ -66,16 +65,8 @@ let routeMap = function (router) {
   new Route({
     router,
     method: constants.HTTP_POST,
-    route: constants.SSE_ENDPOINT_EXTERNAL_PROMOTIONS,
-    api: serviceBasic.promotions,
-    testReq: 'promotions-req.json',
-    testRes: 'promotions-res.json'
-  });
-  new Route({
-    router,
-    method: constants.HTTP_POST,
     route: constants.SSE_ENDPOINT_EXTERNAL_PRICE,
-    api: serviceBasic.externalPrice,
+    api: serviceExternalRequestApi.externalPrice,
     testReq: 'price-req.json',
     testRes: 'price-res.json'
   });
@@ -83,15 +74,23 @@ let routeMap = function (router) {
     router,
     method: constants.HTTP_POST,
     route: constants.SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION,
-    api: serviceBasic.externalPriceValidation,
+    api: serviceExternalRequestApi.externalPriceValidation,
     testReq: 'priceValidation-req.json',
-    testReq: 'priceValidation-res.json',
+    testRes: 'priceValidation-res.json',
+  });
+  new Route({
+    router,
+    method: constants.HTTP_POST,
+    route: constants.SSE_ENDPOINT_EXTERNAL_PROMOTIONS,
+    api: serviceExternalRequestApi.promotions,
+    testReq: 'promotions-req.json',
+    testRes: 'promotions-res.json'
   });
   new Route({
     router,
     method: constants.HTTP_POST,
     route: constants.SSE_ENDPOINT_EXTERNAL_SHIPPING,
-    api: serviceBasic.externalShipping,
+    api: serviceExternalRequestApi.externalShipping,
     testReq: 'shipping-req.json',
     testRes: 'shipping-res.json'
   });

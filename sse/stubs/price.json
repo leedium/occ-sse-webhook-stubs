@@ -1,0 +1,22 @@
+{
+  "lee001_sku001": {
+    "productId": "lee001",
+    "quantity": 3,
+    "catRefId": "sku001",
+    "stockStatus": true,
+    "discountInfo": [],
+    "externalPrice": "5.00",
+    "externalPriceQuantity": "-1",
+    "invalid": false
+  },
+  "lee002_sku002": {
+    "productId": "lee002",
+    "quantity": 5,
+    "catRefId": "sku002",
+    "stockStatus": true,
+    "externalPrice": "2.50",
+    "externalPriceQuantity": "-1",
+    "invalid": false,
+    "currentPrice": 0
+  }
+}

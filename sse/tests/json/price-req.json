@@ -1,1 +1,8 @@
-{}
+{
+  "items": [
+    {
+      "productId": "lee001",
+      "catRefId": "sku001"
+    }
+  ]
+}

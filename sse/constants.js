@@ -37,17 +37,14 @@ module.exports = {
   NODE_ENV_DEVELOPMENT: 'development',
   NODE_ENV_TEST: 'test',
   //
-  SSE_ENDPOINT_EXTERNAL_PROMOTIONS: '/promotions',
   SSE_ENDPOINT_EXTERNAL_PRICE: '/externalPrice',
   SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION: '/externalPriceValidation',
+  SSE_ENDPOINT_EXTERNAL_PROMOTIONS: '/promotions',
   SSE_ENDPOINT_EXTERNAL_SHIPPING: '/externalShipping',
   //
   OCC_DEPLOY_HOST: 'https://ccadmin-z4ma.oracleoutsourcing.com',
   OCC_ENDPOINT_CURRENT_PROFILE: '/ccstoreui/v1/profiles/current',
   OCC_ENDPOINT_PROFILE: '/ccstoreui/v1/profiles',
   OCC_ENDPOINT_LOGIN: '/ccadmin/v1/login',
-  OCC_ENV_PREVIEW: 'preview',
-  //
-  SWAPI_HOST: 'swapi.co',
-  EXTERNAL_RREQUEST_1_PATH: '/api/planets/1/'
+  OCC_ENV_PREVIEW: 'preview'
 };

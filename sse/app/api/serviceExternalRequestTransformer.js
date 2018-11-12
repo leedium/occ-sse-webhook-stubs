@@ -6,25 +6,52 @@
  */
 
 /**
-* @project occ-sse-webhook-stubs
-* @file serviceExternalRequestTransformer.js
-* @company leedium
-* @createdBy davidlee
-* @contact david@leedium.com
-* @dateCreated 31/07/2018
-* @description Class providing transformation of responses back to OCC
-**/
+ * @project occ-sse-webhook-stubs
+ * @file serviceExternalRequestTransformer.js
+ * @company leedium
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 31/07/2018
+ * @description Class providing transformation of responses back to OCC
+ **/
+
+const priceStub = require('../../stubs/price');
+
 
 class ServiceExternalRequestTransformer {
   /**
    * Transform intellisense
    * @returns {Promise<any>}
    */
-  static transformPlanetData (responseObj) {
+  static transformPlanetData(responseObj) {
     //  do whatever tansformations you need to do here, 'don't do anything
     return new Promise((resolve) => {
       resolve(responseObj);
     });
+  }
+
+  /**
+   * This is just an examples that Mocks the transformation
+   * from an external pricing system
+   *
+   * uses priceStub - ../../stubs/price.json
+   *
+   * @param responseObj
+   * @returns {Promise<any>}
+   */
+  static transformPrices(responseObj) {
+    const {items} = responseObj;
+    const updatedPriceList = items.reduce((a, item) => {
+      let key = priceStub[`${item.productId}_${item.catRefId}`];
+      if (key) {
+        a.push(key);
+      }
+      return a;
+    }, []);
+
+    return {
+      items: updatedPriceList
+    };
   }
 }
 

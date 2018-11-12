@@ -51,9 +51,9 @@ describe('====== Utility Routes ======', function () {
    * Tests a vaild Response from the live endpoint
    * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
    */
-  it(`- Returns a external price \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
+  it(`- Returns a external price \n\t${constants.SSE_ENDPOINT_EXTERNAL_PRICE} \n\t- response\n`, function (done) {
     global.testMode = false;
-    let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
+    let payload = readJSONFile(`../${config.testFolder}/json/price-req.json`);
     supertest(app)
       .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_PRICE}`)
       .set({'env': 'preview'})
@@ -64,8 +64,6 @@ describe('====== Utility Routes ======', function () {
           done(err);
           return;
         }
-        expect(res.body).to.have.property('message');
-        expect(res.body.message).to.be('hello LEEDIUM');
         done();
       });
   }).timeout(config.testTimeout);
@@ -74,9 +72,9 @@ describe('====== Utility Routes ======', function () {
    * Tests a vaild Response from the live endpoint
    * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
    */
-  it(`- Returns a external price validation \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
+  it(`- Returns a external price validation \n\t${constants.SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION} \n\t- response\n`, function (done) {
     global.testMode = false;
-    let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
+    let payload = readJSONFile(`../${config.testFolder}/json/priceValidation-req.json`);
     supertest(app)
       .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION}`)
       .set({'env': 'preview'})
@@ -87,8 +85,6 @@ describe('====== Utility Routes ======', function () {
           done(err);
           return;
         }
-        expect(res.body).to.have.property('message');
-        expect(res.body.message).to.be('hello LEEDIUM');
         done();
       });
   }).timeout(config.testTimeout);
@@ -97,9 +93,9 @@ describe('====== Utility Routes ======', function () {
    * Tests a vaild Response from the live endpoint
    * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
    */
-  it(`- Returns a external promotion \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
+  it(`- Returns a external promotion \n\t${constants.SSE_ENDPOINT_EXTERNAL_PROMOTIONS} \n\t- response\n`, function (done) {
     global.testMode = false;
-    let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
+    let payload = readJSONFile(`../${config.testFolder}/json/promotions-req.json`);
     supertest(app)
       .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_PROMOTIONS}`)
       .set({'env': 'preview'})
@@ -110,8 +106,6 @@ describe('====== Utility Routes ======', function () {
           done(err);
           return;
         }
-        expect(res.body).to.have.property('message');
-        expect(res.body.message).to.be('hello LEEDIUM');
         done();
       });
   }).timeout(config.testTimeout);
@@ -120,9 +114,9 @@ describe('====== Utility Routes ======', function () {
    * Tests a vaild Response from the live endpoint
    * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
    */
-  it(`- Returns a external shipping  \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
+  it(`- Returns a external shipping  \n\t${constants.SSE_ENDPOINT_EXTERNAL_SHIPPING} \n\t- response\n`, function (done) {
     global.testMode = false;
-    let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
+    let payload = readJSONFile(`../${config.testFolder}/json/shipping-req.json`);
     supertest(app)
       .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_SHIPPING}`)
       .set({'env': 'preview'})
@@ -133,8 +127,6 @@ describe('====== Utility Routes ======', function () {
           done(err);
           return;
         }
-        expect(res.body).to.have.property('message');
-        expect(res.body.message).to.be('hello LEEDIUM');
         done();
       });
   }).timeout(config.testTimeout);

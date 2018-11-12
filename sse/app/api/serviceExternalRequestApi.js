@@ -20,28 +20,42 @@ const apiRequest = require('../../core/apiRequest');
 const transformer = require('./serviceExternalRequestTransformer');
 
 class ServiceExternalRequestApi {
-  static getPlanet (req, logger) {
-    let httpRequest = {
-      path: constants.EXTERNAL_RREQUEST_1_PATH,
-      hostname: constants.SWAPI_HOST,
-      port: null,
-      headers: {
-        'Content-Type': constants.CONTENT_TYPE_APPLICATION_JSON
-      },
-      method: constants.HTTP_GET
-    };
+  static promotions(req) {
     return new Promise((resolve) => {
-      apiRequest(httpRequest, req.body, logger)
-        .then(response => {
-          transformer.transformPlanetData(response)
-            .then(resolve)
-            .catch(err => ({
-              statusCode: constants.HTTP_RESPONSE_SERVER_ERROR,
-              body: {message: err.message}
-            }));
-        });
+      resolve(({
+        statusCode: constants.HTTP_RESPONSE_SUCCESS,
+        body: {message: "ok"}
+      }));
     });
   }
+
+  static externalPrice(req) {
+    return new Promise((resolve) => {
+      resolve(({
+        statusCode: constants.HTTP_RESPONSE_SUCCESS,
+        body: transformer.transformPrices(req.body)
+      }));
+    });
+  }
+
+  static externalPriceValidation(req) {
+    return new Promise((resolve) => {
+      resolve(({
+        statusCode: constants.HTTP_RESPONSE_SUCCESS,
+        body: {message: "ok"}
+      }));
+    });
+  }
+
+  static externalShipping(req) {
+    return new Promise((resolve) => {
+      resolve(({
+        statusCode: constants.HTTP_RESPONSE_SUCCESS,
+        body: {message: "ok"}
+      }));
+    });
+  }
+
 }
 
 module.exports = ServiceExternalRequestApi;
