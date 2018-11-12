@@ -51,11 +51,11 @@ describe('====== Utility Routes ======', function () {
    * Tests a vaild Response from the live endpoint
    * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
    */
-  it(`- Returns a external promotion \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
+  it(`- Returns a external price \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
     global.testMode = false;
     let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
     supertest(app)
-      .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_PROMOTIONS}`)
+      .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_PRICE}`)
       .set({'env': 'preview'})
       .send(payload)
       .expect(constants.HTTP_RESPONSE_SUCCESS)
@@ -74,11 +74,11 @@ describe('====== Utility Routes ======', function () {
    * Tests a vaild Response from the live endpoint
    * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
    */
-  it(`- Returns a valid message \n\t${constants.SAY_HELLO} \n\t- original search string\n\t- result object\n\t\t-- status\n\t\t-- response\n`, function (done) {
+  it(`- Returns a external price validation \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
     global.testMode = false;
     let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
     supertest(app)
-      .post(`${constants.ROUTE_BASE}${constants.SAY_HELLO}`)
+      .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION}`)
       .set({'env': 'preview'})
       .send(payload)
       .expect(constants.HTTP_RESPONSE_SUCCESS)
@@ -92,22 +92,49 @@ describe('====== Utility Routes ======', function () {
         done();
       });
   }).timeout(config.testTimeout);
+
   /**
-   * Returns an IP adress from a selected resource
+   * Tests a vaild Response from the live endpoint
+   * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
    */
-  it(`- Returns Planet 'Tatooine' \n\t${constants.GET_PLANETS} \n`, function (done) {
+  it(`- Returns a external promotion \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
     global.testMode = false;
+    let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
     supertest(app)
-      .post(`${constants.ROUTE_BASE}${constants.GET_PLANETS}`)
+      .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_PROMOTIONS}`)
       .set({'env': 'preview'})
-      .expect(200)
+      .send(payload)
+      .expect(constants.HTTP_RESPONSE_SUCCESS)
       .end(function (err, res) {
         if (err) {
           done(err);
           return;
         }
-        expect(res.body).to.have.property('name');
-        expect(res.body.name).to.be('Tatooine');
+        expect(res.body).to.have.property('message');
+        expect(res.body.message).to.be('hello LEEDIUM');
+        done();
+      });
+  }).timeout(config.testTimeout);
+
+  /**
+   * Tests a vaild Response from the live endpoint
+   * Live Endpoint : for URL see constants.SEARCH_ENDPOINT
+   */
+  it(`- Returns a external shipping  \n\t${constants.SAY_HELLO} \n\t- response\n`, function (done) {
+    global.testMode = false;
+    let payload = readJSONFile(`../${config.testFolder}/json/serviceBasic-test-req.json`);
+    supertest(app)
+      .post(`${constants.ROUTE_BASE}${constants.SSE_ENDPOINT_EXTERNAL_SHIPPING}`)
+      .set({'env': 'preview'})
+      .send(payload)
+      .expect(constants.HTTP_RESPONSE_SUCCESS)
+      .end(function (err, res) {
+        if (err) {
+          done(err);
+          return;
+        }
+        expect(res.body).to.have.property('message');
+        expect(res.body.message).to.be('hello LEEDIUM');
         done();
       });
   }).timeout(config.testTimeout);

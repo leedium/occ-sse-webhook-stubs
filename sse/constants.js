@@ -6,7 +6,7 @@
  */
 
 /**
- * @project leedium-sse
+ * @project occ-sse-webhook-stubs
  * @file constants.js
  * @company leedium
  * @createdBy davidlee
@@ -18,7 +18,7 @@ module.exports = {
   SSE_NAME: 'leedium',
   SSE_VERSION: '1',
   TEST_FOLDER: 'tests',
-  NODE_EXTENSION_SERVER_PORT: 11372,
+  NODE_EXTENSION_SERVER_PORT: 30655,
   NODE_EXTENSION_TEST_PORT: 3099,
   ROUTE_BASE: '/v1/leedium',
   //
@@ -37,9 +37,10 @@ module.exports = {
   NODE_ENV_DEVELOPMENT: 'development',
   NODE_ENV_TEST: 'test',
   //
-  SSE_ENDPOINT_PROMOTIONS: '/promotions',
-  SAY_HELLO: '/servicebasic/sayHello',
-  GET_PLANETS: '/serviceexternal/getPlanet',
+  SSE_ENDPOINT_EXTERNAL_PROMOTIONS: '/promotions',
+  SSE_ENDPOINT_EXTERNAL_PRICE: '/externalPrice',
+  SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION: '/externalPriceValidation',
+  SSE_ENDPOINT_EXTERNAL_SHIPPING: '/externalShipping',
   //
   OCC_DEPLOY_HOST: 'https://ccadmin-z4ma.oracleoutsourcing.com',
   OCC_ENDPOINT_CURRENT_PROFILE: '/ccstoreui/v1/profiles/current',

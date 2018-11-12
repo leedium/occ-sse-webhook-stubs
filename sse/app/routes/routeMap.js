@@ -8,7 +8,7 @@
 /* eslint no-new: 0 */
 
 /**
- * @project leedium-sse
+ * @project occ-sse-webhook-stubs
  * @file routeMap.js
  * @company leedium
  * @createdBy davidlee
@@ -66,28 +66,35 @@ let routeMap = function (router) {
   new Route({
     router,
     method: constants.HTTP_POST,
-    route: constants.SSE_ENDPOINT_PROMOTIONS,
+    route: constants.SSE_ENDPOINT_EXTERNAL_PROMOTIONS,
     api: serviceBasic.promotions,
-    testReq: 'serviceBasic-test-req.json',
-    testRes: 'serviceBasic-test-res.json'
+    testReq: 'promotions-req.json',
+    testRes: 'promotions-res.json'
   });
   new Route({
     router,
     method: constants.HTTP_POST,
-    route: constants.SAY_HELLO,
-    api: serviceBasic.sayHello,
-    testReq: 'serviceBasic-test-req.json',
-    testRes: 'serviceBasic-test-res.json'
+    route: constants.SSE_ENDPOINT_EXTERNAL_PRICE,
+    api: serviceBasic.externalPrice,
+    testReq: 'price-req.json',
+    testRes: 'price-res.json'
   });
   new Route({
     router,
     method: constants.HTTP_POST,
-    route: constants.GET_PLANETS,
-    api: serviceExternalRequestApi.getPlanet,
-    testReq: 'test2-req.json',
-    testRes: 'test2-res.json'
+    route: constants.SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION,
+    api: serviceBasic.externalPriceValidation,
+    testReq: 'priceValidation-req.json',
+    testReq: 'priceValidation-res.json',
   });
-
+  new Route({
+    router,
+    method: constants.HTTP_POST,
+    route: constants.SSE_ENDPOINT_EXTERNAL_SHIPPING,
+    api: serviceBasic.externalShipping,
+    testReq: 'shipping-req.json',
+    testRes: 'shipping-res.json'
+  });
   return router;
 };
 module.exports = routeMap;

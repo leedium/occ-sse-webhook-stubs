@@ -6,7 +6,7 @@
  */
 
 /**
- * @project leedium-sse
+ * @project occ-sse-webhook-stubs
  * @file service1Api.js
  * @company leedium
  * @createdBy davidlee
@@ -18,14 +18,6 @@
 const constants = require('../../constants');
 
 class ServiceBasic {
-  static sayHello (req) {
-    return new Promise((resolve) => {
-      resolve(({
-        statusCode: constants.HTTP_RESPONSE_SUCCESS,
-        body: {message: `hello ${req.body.name}`}
-      }));
-    });
-  }
   static promotions (req) {
     return new Promise((resolve) => {
       resolve(({
@@ -34,6 +26,32 @@ class ServiceBasic {
       }));
     });
   }
+  static externalPrice (req) {
+    return new Promise((resolve) => {
+      resolve(({
+        statusCode: constants.HTTP_RESPONSE_SUCCESS,
+        body: {message: `hello ${req.body.name}`}
+      }));
+    });
+  }
+  static externalPriceValidation (req) {
+    return new Promise((resolve) => {
+      resolve(({
+        statusCode: constants.HTTP_RESPONSE_SUCCESS,
+        body: {message: `hello ${req.body.name}`}
+      }));
+    });
+  }
+  static externalShipping (req) {
+    return new Promise((resolve) => {
+      resolve(({
+        statusCode: constants.HTTP_RESPONSE_SUCCESS,
+        body: {message: `hello ${req.body.name}`}
+      }));
+    });
+  }
+
+
 }
 
 module.exports = ServiceBasic;

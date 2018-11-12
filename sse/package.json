@@ -66,6 +66,8 @@
   "publicUrls": [
     "/ccstorex/custom/v1/",
     "/ccstorex/custom/v1/leedium/version",
+    "/ccstorex/custom/v1/leedium/externalPrice",
+    "/ccstorex/custom/v1/leedium/externalPriceValidation",
     "/ccstorex/custom/v1/leedium/promotions"
   ],
   "authenticatedUrls": [],

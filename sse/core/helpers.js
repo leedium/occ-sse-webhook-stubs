@@ -6,7 +6,7 @@
  */
 
 /**
- * @project leedium-sse
+ * @project occ-sse-webhook-stubs
  * @file helpers.js
  * @company leedium
  * @createdBy davidlee
