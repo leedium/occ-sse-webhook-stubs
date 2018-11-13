@@ -67,7 +67,7 @@ let routeMap = function (router) {
     method: constants.HTTP_POST,
     route: constants.SSE_ENDPOINT_EXTERNAL_PRICE,
     api: serviceExternalRequestApi.externalPrice,
-    testReq: 'price-req.json',
+    testReq: 'externalPrice-req.json',
     testRes: 'price-res.json'
   });
   new Route({

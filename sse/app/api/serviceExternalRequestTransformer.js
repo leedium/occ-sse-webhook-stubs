@@ -39,12 +39,11 @@ class ServiceExternalRequestTransformer {
    * @param responseObj
    * @returns {Promise<any>}
    */
-  static transformPrices(responseObj) {
-    const {items} = responseObj;
+  static transformPrices(items) {
     const updatedPriceList = items.reduce((a, item) => {
-      let key = priceStub[`${item.productId}_${item.catRefId}`];
+      let key = priceStub[item.catRefId];
       if (key) {
-        a.push(key);
+        a.push(Object.assign({},item,key));
       }
       return a;
     }, []);
@@ -52,6 +51,7 @@ class ServiceExternalRequestTransformer {
     console.log(updatedPriceList)
 
     return {
+      numberOfItems: updatedPriceList.length,
       items: updatedPriceList
     };
   }
