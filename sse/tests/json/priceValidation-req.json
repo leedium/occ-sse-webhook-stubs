@@ -1,1 +1,238 @@
-{}
+{
+  "profile": {
+    "lastName": "Lee",
+    "firstName": "David",
+    "loyaltyPrograms": [],
+    "receiveEmail": "yes",
+    "middleName": null,
+    "id": "132051",
+    "locale": "en",
+    "sitePropertiesList": [
+      {
+        "site": {
+          "id": "siteUS"
+        },
+        "properties": {
+          "GDPRProfileP13nConsentDate": null,
+          "GDPRProfileP13nConsentGranted": false,
+          "receiveEmail": "yes",
+          "receiveEmailDate": "2018-10-10T08:01:47.596Z"
+        }
+      }
+    ],
+    "email": "support@leedium.com",
+    "daytimeTelephoneNumber": null
+  },
+  "externalPrices": [
+    {
+      "commerceItemId": "ci1002577",
+      "externalPriceQuantity": -1,
+      "catRefId": "sku002",
+      "externalPrice": 2.5
+    }
+  ],
+  "currencyCode": "EUR",
+  "operation": "externalPricing",
+  "order": {
+    "taxPriceInfo": {
+      "cityTax": 0,
+      "secondaryCurrencyTaxAmount": 0,
+      "amount": 0,
+      "valueAddedTax": 0,
+      "countyTax": 0,
+      "isTaxIncluded": false,
+      "miscTax": 0,
+      "districtTax": 0,
+      "stateTax": 0,
+      "countryTax": 0
+    },
+    "shippingGroups": [
+      {
+        "discountInfo": {
+          "orderDiscount": 0,
+          "shippingDiscount": 0,
+          "discountDescList": []
+        },
+        "shippingMethod": {
+          "secondaryCurrencyTaxAmount": 0,
+          "shippingTax": 0,
+          "cost": 0,
+          "taxCode": "",
+          "value": "100002",
+          "shippingMethodDescription": "One Dollar Shipping"
+        },
+        "shippingGroupId": "sg13414",
+        "shippingAddress": {
+          "lastName": "Lee",
+          "country": "NL",
+          "address3": "",
+          "address2": "",
+          "city": "Amsterdam",
+          "prefix": "",
+          "address1": "Eerste Schinkelstraat",
+          "postalCode": "1075TW",
+          "companyName": "",
+          "jobTitle": "",
+          "county": "",
+          "suffix": "",
+          "firstName": "David",
+          "phoneNumber": "",
+          "faxNumber": "",
+          "alias": "Address",
+          "middleName": "",
+          "state": "NH",
+          "email": "support@leedium.com"
+        },
+        "type": "hardgoodShippingGroup",
+        "items": [
+          {
+            "rawTotalPrice": 0,
+            "returnedQuantity": 0,
+            "dynamicProperties": [],
+            "shippingSurchargeValue": 0,
+            "externalData": [],
+            "discountAmount": 0,
+            "preOrderQuantity": 0,
+            "externalPrice": 2.5,
+            "commerceItemId": "ci1002573",
+            "price": 0,
+            "onSale": false,
+            "stateDetailsAsUser": "The item has been initialized within the shipping group",
+            "commerceId": "ci1002577",
+            "unitPrice": 0,
+            "amount": 0,
+            "quantity": 1,
+            "productId": "lee002",
+            "salePrice": 0,
+            "externalPriceQuantity": -1,
+            "catRefId": "sku002",
+            "discountInfo": [],
+            "shopperInput": {},
+            "backOrderQuantity": 0,
+            "listPrice": 0,
+            "status": "INITIAL"
+          }
+        ]
+      }
+    ],
+    "creationTime": 1542080620267,
+    "orderId": "o12189",
+    "lastModifiedDate": "2018-11-13T03:43:40.267Z",
+    "dynamicProperties": [],
+    "payments": [],
+    "shippingMethod": {
+      "shippingTax": 0,
+      "cost": 0,
+      "value": "100002"
+    },
+    "priceListGroup": {
+      "displayName": "EUR",
+      "repositoryId": "eur"
+    },
+    "orderStatus": "Incomplete",
+    "creationDate": "2018-11-13T03:43:40.267Z",
+    "orderProfileId": "132051",
+    "priceInfo": {
+      "amount": 0,
+      "total": 0,
+      "shipping": 0,
+      "shippingSurchargeValue": 0,
+      "tax": 0,
+      "subTotal": 0,
+      "currencyCode": null,
+      "totalWithoutTax": 0
+    },
+    "discountInfo": {
+      "unclaimedCouponMultiPromotions": {},
+      "orderCouponsMap": {},
+      "orderDiscount": 0,
+      "shippingDiscount": 0,
+      "orderImplicitDiscountList": [],
+      "unclaimedCouponsMap": {},
+      "claimedCouponMultiPromotions": {}
+    },
+    "shoppingCart": {
+      "numberOfItems": 1,
+      "items": [
+        {
+          "primaryThumbImageURL": "/img/no-image.jpg",
+          "rawTotalPrice": 0,
+          "displayName": "Externally Priced Product 2",
+          "dynamicProperties": [],
+          "shippingSurchargeValue": 0,
+          "discountAmount": 0,
+          "externalData": [],
+          "description": "Externally Priced Product",
+          "isItemValid": true,
+          "externalPrice": 2.5,
+          "commerceItemId": "ci1002573",
+          "price": 0,
+          "variant": [],
+          "onSale": false,
+          "id": "ci1002577",
+          "unitPrice": 0,
+          "amount": 0,
+          "quantity": 1,
+          "productId": "lee002",
+          "salePrice": 0,
+          "detailedItemPriceInfo": [],
+          "giftWithPurchaseCommerceItemMarkers": [],
+          "externalPriceQuantity": -1,
+          "catRefId": "sku002",
+          "skuProperties": [
+            {
+              "propertyType": "sku-base",
+              "name": "Not Returnable",
+              "id": "nonreturnable",
+              "value": false
+            },
+            {
+              "propertyType": "sku-base",
+              "name": "Name",
+              "id": "displayName",
+              "value": "Externally Priced 2"
+            },
+            {
+              "propertyType": "sku-base",
+              "name": "Active",
+              "id": "active",
+              "value": true
+            },
+            {
+              "propertyType": "sku-base",
+              "name": "Id",
+              "id": "id",
+              "value": "sku002"
+            }
+          ],
+          "discountInfo": [],
+          "shopperInput": {},
+          "listPrice": 0
+        }
+      ]
+    },
+    "giftWithPurchaseInfo": [],
+    "siteId": "siteUS",
+    "shippingAddress": {
+      "lastName": "Lee",
+      "country": "NL",
+      "address3": "",
+      "address2": "",
+      "city": "Amsterdam",
+      "prefix": "",
+      "address1": "Eerste Schinkelstraat",
+      "postalCode": "1075TW",
+      "companyName": "",
+      "jobTitle": "",
+      "county": "",
+      "suffix": "",
+      "firstName": "David",
+      "phoneNumber": "",
+      "faxNumber": "",
+      "alias": "Address",
+      "middleName": "",
+      "state": "NH",
+      "email": "support@leedium.com"
+    }
+  }
+}
