@@ -25,7 +25,7 @@ class ServiceExternalRequestApi {
    * Method handles the promotions route
    * @returns {Promise<any>}
    */
-  static promotions(req) {
+  static externalPromotions(req) {
     console.log('promotions',JSON.stringify(req.body, null, 2));
     return new Promise((resolve) => {
       resolve(({

@@ -68,7 +68,7 @@
     "/ccstorex/custom/v1/webhook/version",
     "/ccstorex/custom/v1/webhook/externalPrice",
     "/ccstorex/custom/v1/webhook/externalPriceValidation",
-    "/ccstorex/custom/v1/webhook/promotions"
+    "/ccstorex/custom/v1/webhook/externalPromotions"
   ],
   "authenticatedUrls": [],
   "translations": [
