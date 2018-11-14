@@ -7,7 +7,9 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
 (coming soon...)
 
 ## Function
-### [External Price Validation](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2203configurethewebhook01.html "External Price validation in Oracle Commerce Cloud")
+### [External Price Validation](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2203configurethewebhook01.html "External Price validation in Oracle Commerce Cloud") 
+[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/priceValidation-req.json "Example Price Validation Request Schema")
+
 -  Use this in tandem with the [occ-pricing-widget](https://github.com/leedium/occ-external-pricing-widget "Occ Pricing Widget")
 -  This endpoint validates that the external prices have not changed post order submission.
    returns:
@@ -17,13 +19,15 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
              "responseCode": "5002" // fail
    }
    ```
-[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/priceValidation-req.json "Example Price Validation Request Schema")
 
-### [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
+
+### [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud") 
+
+[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/externalPromotions-req.json "Example Promotions Request Schema")
 #### Webhook Request 
 - Executes after external pricing has been initiated when an item is added to the basket.
 - The payload sent by this webhook contains details about order including all promotions associated with the order and with the product itself.  
-[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/externalPromotions-req.json "Example Promotions Request Schema")
+
 
 #### Webhook Response
 When responding to the [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
