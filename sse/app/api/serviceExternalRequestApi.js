@@ -26,11 +26,33 @@ class ServiceExternalRequestApi {
    * @returns {Promise<any>}
    */
   static externalPromotions(req) {
-    console.log('promotions',JSON.stringify(req.body, null, 2));
+    console.log('externalPromotions',JSON.stringify(req.body, null, 2));
     return new Promise((resolve) => {
       resolve(({
         statusCode: constants.HTTP_RESPONSE_SUCCESS,
-        body: {message: "ok"}
+        body: {
+          "responseCode":"6101",
+          "promotionAdjustments": [
+            {
+              "adjustmentOperation": "adjustItemPrice",
+              "promotionId": "EP1001",
+              "description": "$20 discount on XBOX 360",
+              "id": "ci6000413",
+              "quantity": "2",
+              "adjustmentOrdering": "highestFirst",
+              "adjustmentAmount": "-20",
+              "displayName": "XBOX Forever",
+              "coupon": "20DOLLARDISCOUNTXBOX"
+            },
+            {
+              "adjustmentOperation": "adjustOrderPrice",
+              "promotionId": "EP1003",
+              "description": "$50 off order when total above $300",
+              "adjustmentAmount": "-50",
+              "displayName": "50DollarDiscount"
+            }
+          ]
+        }
       }));
     });
   }

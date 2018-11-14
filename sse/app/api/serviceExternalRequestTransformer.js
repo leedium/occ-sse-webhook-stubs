@@ -32,7 +32,8 @@ class ServiceExternalRequestTransformer {
 
   /**
    * This is just an examples that Mocks the transformation
-   * from an external pricing system
+   * Simulates how an external pricing system would modifly the
+   * cart data going back to the storefront
    *
    * uses priceStub - ../../stubs/price.json
    *
@@ -48,11 +49,19 @@ class ServiceExternalRequestTransformer {
       return a;
     }, []);
 
-    console.log(updatedPriceList)
+    // Add discount info if any here
+    const discountInfo = {
+      "orderCouponsMap": {},
+      "orderDiscount": 0,
+        "orderImplicitDiscountList": [],
+        "unclaimedCouponsMap": {},
+      "shippingDiscount": 0
+    };
 
     return {
       numberOfItems: updatedPriceList.length,
-      items: updatedPriceList
+      items: updatedPriceList,
+        discountInfo
     };
   }
 }

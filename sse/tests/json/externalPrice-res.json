@@ -1,0 +1,15 @@
+{
+  "sku001": {
+    "onSale": false,
+    "productId": "lee001",
+    "catRefId": "sku001",
+    "externalPrice": "5.00",
+    "externalPriceQuantity": "-1"
+  },
+  "sku002": {
+    "productId": "lee002",
+    "catRefId": "sku002",
+    "externalPrice": "2.50",
+    "externalPriceQuantity": "1"
+  }
+}
