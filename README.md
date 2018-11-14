@@ -3,48 +3,33 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
 
 ## Supported [Webhooks](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s0301usewebhooks01.html "Using webhooks in Oracle Commerce Cloud")
 
-#### Event
+## Event
 (None available...yet)
 
-#### Function
-- [External Price Validation](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2203configurethewebhook01.html "External Price validation in Oracle Commerce Cloud")
-    -  Use this in tandem with the [occ-pricing-widget](https://github.com/leedium/occ-external-pricing-widget "Occ Pricing Widget")
-    -  This endpoint validates that the external prices have not changed post order submission.
-       returns:
-       ```
-       {
-                 "responseCode": "5001" // success
-                 "responseCode": "5002" // fail
-       }
-       ```
+## Function
+### [External Price Validation](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2203configurethewebhook01.html "External Price validation in Oracle Commerce Cloud")
+-  Use this in tandem with the [occ-pricing-widget](https://github.com/leedium/occ-external-pricing-widget "Occ Pricing Widget")
+-  This endpoint validates that the external prices have not changed post order submission.
+   returns:
+   ```
+   {
+             "responseCode": "5001" // success
+             "responseCode": "5002" // fail
+   }
+[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/priceValidation-req.json "Example Price Validation Request Schema")   ```
 
-- [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
-  - Executes after external pricing has been initiated when an item is added to the basket.
-  - The payload sent by this webhook contains details about order including all promotions associated withe the order
-  and with the product itself.
-  -  If the discount(s) is set up in the admin then you will see it in the item's discountInfo Array property.
-  Ex:
-  ```
-   // sample from the webhook request JSON
-   //...
-   "discountInfo": [
-              {
-                "promotionLongDesc": "<p>This is a discount for item 2</p>",
-                "promotionName": "lee002 item FREE",
-                "promotionLevel": "item",
-                "promotionDesc": "lee002 item FREE",
-                "promotionId": "promo10001",
-                "giftWithPurchaseDiscountInfo": []
-              }
-            ]
-  //...
-  ```
--  Webhook Response
+## [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
+#### Webhook Request 
+- Executes after external pricing has been initiated when an item is added to the basket.
+- The payload sent by this webhook contains details about order including all promotions associated with the order and with the product itself.
+[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/externalPromotions-req.json "Example Promotions Request Schema")
+
+#### Webhook Response
 When responding to the [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
 Webhook you need to return a response code and a promotions adjustments array.
 
-The following example is taken from the Oracle Commerce Cloud documentation.
-* Notice that the exmple shows Item discount and Order promotions.
+  The following example is taken from the Oracle Commerce Cloud [documentation](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2203configurethewebhook01.html "Configure the promotions webhook").
+* Notice that the example shows Item discount and Order promotions.
 - Will investigate JSON schema needed for various permutations of orders
 
 ```
@@ -57,7 +42,7 @@ The following example is taken from the Oracle Commerce Cloud documentation.
   "id": "ci6000413",
   "quantity": "2", // will trigger after two items added
   "adjustmentOrdering": "highestFirst",
-  "adjustmentAmount": "-20",
+  "adjustmentAmount": "-20","adjustmentAmount": "-20",
   "displayName": "$20 OFF",
   "coupon": "20DOLLARSOFF"
 },
@@ -71,6 +56,4 @@ The following example is taken from the Oracle Commerce Cloud documentation.
 }
  ```
 
-
-
-- [External Shipping](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2101integratewithexternalshippingcal01.html "External Shipping in Oracle Commerce Cloud")
+### [External Shipping](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2101integratewithexternalshippingcal01.html "External Shipping in Oracle Commerce Cloud")
