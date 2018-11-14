@@ -56,7 +56,23 @@ Webhook you need to return a response code and a promotions adjustments array.
 
 }
  ```
+ #### adjustmentAmount (Important)
+ (Courtesy of @[Marcel Tresso Marcolino](https://nl.linkedin.com/in/marcelotm "Marcel Tresso Marcolino")
+ - There is no specific code or id for percent, FREE, buy1get1Free, etc, etc for external promotions
+ - Set the "adjustmentAmount" price to reflect the included discount
+ ```
+ // for a free item
+ {
+   ...
+   "adjustmentAmount": "0",
+   ...
+ }
+ ```
+ Thanks [Marcelo](https://nl.linkedin.com/in/marcelotm "Marcel Tresso Marcolino")!
+ 
 
 ### [External Shipping](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2101integratewithexternalshippingcal01.html "External Shipping in Oracle Commerce Cloud")
 
 - (coming soon)
+
+
