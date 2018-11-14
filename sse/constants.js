@@ -39,7 +39,7 @@ module.exports = {
   //
   SSE_ENDPOINT_EXTERNAL_PRICE: '/externalPrice',
   SSE_ENDPOINT_EXTERNAL_PRICE_VALIDATION: '/externalPriceValidation',
-  SSE_ENDPOINT_EXTERNAL_PROMOTIONS: '/promotions',
+  SSE_ENDPOINT_EXTERNAL_PROMOTIONS: '/externalPromotions',
   SSE_ENDPOINT_EXTERNAL_SHIPPING: '/externalShipping',
   //
   OCC_DEPLOY_HOST: 'https://ccadmin-z4ma.oracleoutsourcing.com',

@@ -1,0 +1,72 @@
+{
+  "items": [
+    {
+      "productId": "lee002",
+      "quantity": 3,
+      "repositoryId": "",
+      "availabilityDate": null,
+      "catRefId": "sku002",
+      "expanded": false,
+      "stockStatus": true,
+      "stockState": "IN_STOCK",
+      "orderableQuantityMessage": "",
+      "commerceItemQuantity": 3,
+      "orderableQuantity": 998,
+      "selectedOptions": [],
+      "selectedSkuProperties": [],
+      "discountInfo": [],
+      "rawTotalPrice": 15,
+      "detailedItemPriceInfo": [
+        {
+          "discounted": false,
+          "secondaryCurrencyTaxAmount": 0,
+          "amount": 2.5,
+          "quantity": 1,
+          "tax": 0,
+          "orderDiscountShare": 0,
+          "detailedUnitPrice": 2.5,
+          "currencyCode": "EUR"
+        },
+        {
+          "discounted": false,
+          "secondaryCurrencyTaxAmount": 0,
+          "amount": 10,
+          "quantity": 2,
+          "tax": 0,
+          "orderDiscountShare": 0,
+          "detailedUnitPrice": 5,
+          "currencyCode": "EUR"
+        }
+      ],
+      "externalPrice": "2.50",
+      "externalPriceQuantity": "1",
+      "externalData": [],
+      "addOnItem": false,
+      "displayName": "",
+      "invalid": false,
+      "commerceItemId": "ci1002609",
+      "priceListGroupId": "eur",
+      "giftWithPurchaseCommerceItemMarkers": []
+    },
+    {
+      "productId": "lee001",
+      "quantity": 1,
+      "repositoryId": "",
+      "availabilityDate": null,
+      "catRefId": "sku001",
+      "expanded": false,
+      "stockStatus": true,
+      "stockState": "IN_STOCK",
+      "commerceItemQuantity": 1,
+      "selectedOptions": [],
+      "detailedItemPriceInfo": [],
+      "detailedRecurringChargeInfo": [],
+      "externalData": [],
+      "addOnItem": false,
+      "displayName": "Externally Priced Product 1",
+      "invalid": false,
+      "priceListGroupId": "eur"
+    }
+  ]
+
+}
