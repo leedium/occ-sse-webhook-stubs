@@ -22,7 +22,7 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
 ### [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
 #### Webhook Request 
 - Executes after external pricing has been initiated when an item is added to the basket.
-- The payload sent by this webhook contains details about order including all promotions associated with the order and with the product itself.
+- The payload sent by this webhook contains details about order including all promotions associated with the order and with the product itself.  
 [Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/externalPromotions-req.json "Example Promotions Request Schema")
 
 #### Webhook Response
