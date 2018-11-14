@@ -16,7 +16,8 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
              "responseCode": "5001" // success
              "responseCode": "5002" // fail
    }
-[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/priceValidation-req.json "Example Price Validation Request Schema")   ```
+   ```
+[Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/priceValidation-req.json "Example Price Validation Request Schema")
 
 ## [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
 #### Webhook Request 
