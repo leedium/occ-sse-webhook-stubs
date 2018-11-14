@@ -4,7 +4,7 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
 ## Supported [Webhooks](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s0301usewebhooks01.html "Using webhooks in Oracle Commerce Cloud")
 
 ## Event
-(None available...yet)
+(coming soon...)
 
 ## Function
 ### [External Price Validation](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2203configurethewebhook01.html "External Price validation in Oracle Commerce Cloud")
@@ -19,7 +19,7 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
    ```
 [Example Schema](https://github.com/leedium/occ-sse-webhook-stubs/blob/master/sse/tests/json/priceValidation-req.json "Example Price Validation Request Schema")
 
-## [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
+### [External Promotions](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2204usepromotionsfromanexternalsyste01.html "External Promotions in Oracle Commerce Cloud")
 #### Webhook Request 
 - Executes after external pricing has been initiated when an item is added to the basket.
 - The payload sent by this webhook contains details about order including all promotions associated with the order and with the product itself.
@@ -58,3 +58,5 @@ Webhook you need to return a response code and a promotions adjustments array.
  ```
 
 ### [External Shipping](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2101integratewithexternalshippingcal01.html "External Shipping in Oracle Commerce Cloud")
+
+- (coming soon)
