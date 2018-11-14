@@ -43,7 +43,7 @@ Webhook you need to return a response code and a promotions adjustments array.
   "id": "ci6000413",
   "quantity": "2", // will trigger after two items added
   "adjustmentOrdering": "highestFirst",
-  "adjustmentAmount": "-20","adjustmentAmount": "-20",
+  "adjustmentAmount": "-20",
   "displayName": "$20 OFF",
   "coupon": "20DOLLARSOFF"
 },
