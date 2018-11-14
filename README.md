@@ -9,7 +9,7 @@ Server-Side Extension to handle non payment [Oracle Commerce Cloud](https://clou
 #### Function
 - [External Price Validation](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2203configurethewebhook01.html "External Price validation in Oracle Commerce Cloud")
     -  Use this in tandem with the [occ-pricing-widget](https://github.com/leedium/occ-external-pricing-widget "Occ Pricing Widget")
-    -  This enpoint validates that the external prices have not changed post order submission.
+    -  This endpoint validates that the external prices have not changed post order submission.
        returns:
        ```
        {
