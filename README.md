@@ -72,8 +72,7 @@ Webhook you need to return a response code and a promotions adjustments array.
    ...
  }
  ```
- Thanks [Marcelo](https://nl.linkedin.com/in/marcelotm "Marcel Tresso Marcolino")!
- 
+
 
 ### [External Shipping](https://docs.oracle.com/cd/E97801_01/Cloud.18C/ExtendingCC/html/s2101integratewithexternalshippingcal01.html "External Shipping in Oracle Commerce Cloud")
 
